@@ -99,7 +99,7 @@ const CookiesPage = () => (
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/BuyZy">
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <div className="flex-1">
