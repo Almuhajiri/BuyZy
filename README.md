@@ -290,6 +290,17 @@ Potential improvements for this portfolio project:
 - **Git Commits**: Professional commit history with semantic messages
 - **Live Demo**: Deployed on GitHub Pages
 
+## 📋 Documentation
+
+Comprehensive project documentation is available in the [`/documentation`](./documentation/) folder:
+
+- **Business Requirements Document**: Complete technical specifications and requirements
+- **Professional PDFs**: Client-ready documentation with branded design
+- **Interactive HTML**: Web-viewable versions with navigation
+- **Assets**: Styling files and templates
+
+**[View Documentation →](./documentation/)**
+
 **Built with ❤️ using React + TailwindCSS**
 
 ---

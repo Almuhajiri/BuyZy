@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Development Team" />
+  <meta name="dcterms.date" content="2025-08-04" />
+  <title>BuyZy - Business Requirements Document</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {  background-color: #f8f8f8; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ef2929; } /* Alert */
+    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #204a87; } /* Attribute */
+    code span.bn { color: #0000cf; } /* BaseN */
+    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4e9a06; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #8f5902; font-style: italic; } /* Comment */
+    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+    code span.dt { color: #204a87; } /* DataType */
+    code span.dv { color: #0000cf; } /* DecVal */
+    code span.er { color: #a40000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #0000cf; } /* Float */
+    code span.fu { color: #204a87; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+    code span.ot { color: #8f5902; } /* Other */
+    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+    code span.ss { color: #4e9a06; } /* SpecialString */
+    code span.st { color: #4e9a06; } /* String */
+    code span.va { color: #000000; } /* Variable */
+    code span.vs { color: #4e9a06; } /* VerbatimString */
+    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="pdf-style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">BuyZy - Business Requirements Document</h1>
+<p class="author">Development Team</p>
+<p class="date">August 4, 2025</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#business-requirements-document-brd"
+id="toc-business-requirements-document-brd"><span
+class="toc-section-number">1</span> Business Requirements Document
+(BRD)</a>
+<ul>
+<li><a href="#buyzy---modern-e-commerce-platform"
+id="toc-buyzy---modern-e-commerce-platform"><span
+class="toc-section-number">1.1</span> BuyZy - Modern E-commerce
+Platform</a></li>
+<li><a href="#table-of-contents" id="toc-table-of-contents"><span
+class="toc-section-number">1.2</span> Table of Contents</a></li>
+<li><a href="#executive-summary" id="toc-executive-summary"><span
+class="toc-section-number">1.3</span> Executive Summary</a>
+<ul>
+<li><a href="#project-vision" id="toc-project-vision"><span
+class="toc-section-number">1.3.1</span> Project Vision</a></li>
+<li><a href="#key-deliverables" id="toc-key-deliverables"><span
+class="toc-section-number">1.3.2</span> Key Deliverables</a></li>
+<li><a href="#success-metrics" id="toc-success-metrics"><span
+class="toc-section-number">1.3.3</span> Success Metrics</a></li>
+</ul></li>
+<li><a href="#project-overview" id="toc-project-overview"><span
+class="toc-section-number">1.4</span> Project Overview</a>
+<ul>
+<li><a href="#business-context" id="toc-business-context"><span
+class="toc-section-number">1.4.1</span> Business Context</a></li>
+<li><a href="#target-audience" id="toc-target-audience"><span
+class="toc-section-number">1.4.2</span> Target Audience</a></li>
+<li><a href="#project-scope" id="toc-project-scope"><span
+class="toc-section-number">1.4.3</span> Project Scope</a></li>
+</ul></li>
+<li><a href="#business-objectives" id="toc-business-objectives"><span
+class="toc-section-number">1.5</span> Business Objectives</a>
+<ul>
+<li><a href="#primary-objectives" id="toc-primary-objectives"><span
+class="toc-section-number">1.5.1</span> Primary Objectives</a></li>
+<li><a href="#secondary-objectives" id="toc-secondary-objectives"><span
+class="toc-section-number">1.5.2</span> Secondary Objectives</a></li>
+</ul></li>
+<li><a href="#stakeholder-analysis" id="toc-stakeholder-analysis"><span
+class="toc-section-number">1.6</span> Stakeholder Analysis</a>
+<ul>
+<li><a href="#primary-stakeholders" id="toc-primary-stakeholders"><span
+class="toc-section-number">1.6.1</span> Primary Stakeholders</a></li>
+<li><a href="#secondary-stakeholders"
+id="toc-secondary-stakeholders"><span
+class="toc-section-number">1.6.2</span> Secondary Stakeholders</a></li>
+</ul></li>
+<li><a href="#functional-requirements"
+id="toc-functional-requirements"><span
+class="toc-section-number">1.7</span> Functional Requirements</a>
+<ul>
+<li><a href="#fr-001-homepage-navigation"
+id="toc-fr-001-homepage-navigation"><span
+class="toc-section-number">1.7.1</span> FR-001: Homepage &amp;
+Navigation</a></li>
+<li><a href="#fr-002-product-catalog"
+id="toc-fr-002-product-catalog"><span
+class="toc-section-number">1.7.2</span> FR-002: Product Catalog</a></li>
+<li><a href="#fr-003-shopping-cart" id="toc-fr-003-shopping-cart"><span
+class="toc-section-number">1.7.3</span> FR-003: Shopping Cart</a></li>
+<li><a href="#fr-004-checkout-process"
+id="toc-fr-004-checkout-process"><span
+class="toc-section-number">1.7.4</span> FR-004: Checkout
+Process</a></li>
+<li><a href="#fr-005-user-account-management"
+id="toc-fr-005-user-account-management"><span
+class="toc-section-number">1.7.5</span> FR-005: User Account
+Management</a></li>
+<li><a href="#fr-006-company-information"
+id="toc-fr-006-company-information"><span
+class="toc-section-number">1.7.6</span> FR-006: Company
+Information</a></li>
+</ul></li>
+<li><a href="#user-journey-flow" id="toc-user-journey-flow"><span
+class="toc-section-number">1.8</span> User Journey &amp; Flow</a>
+<ul>
+<li><a href="#primary-user-journey-complete-shopping-experience"
+id="toc-primary-user-journey-complete-shopping-experience"><span
+class="toc-section-number">1.8.1</span> Primary User Journey: Complete
+Shopping Experience</a></li>
+<li><a href="#alternative-user-journeys"
+id="toc-alternative-user-journeys"><span
+class="toc-section-number">1.8.2</span> Alternative User
+Journeys</a></li>
+</ul></li>
+<li><a href="#technical-architecture"
+id="toc-technical-architecture"><span
+class="toc-section-number">1.9</span> Technical Architecture</a>
+<ul>
+<li><a href="#frontend-architecture"
+id="toc-frontend-architecture"><span
+class="toc-section-number">1.9.1</span> Frontend Architecture</a></li>
+<li><a href="#technology-stack" id="toc-technology-stack"><span
+class="toc-section-number">1.9.2</span> Technology Stack</a></li>
+<li><a href="#component-architecture-pattern"
+id="toc-component-architecture-pattern"><span
+class="toc-section-number">1.9.3</span> Component Architecture
+Pattern</a></li>
+</ul></li>
+<li><a href="#uiux-design-system" id="toc-uiux-design-system"><span
+class="toc-section-number">1.10</span> UI/UX Design System</a>
+<ul>
+<li><a href="#color-palette" id="toc-color-palette"><span
+class="toc-section-number">1.10.1</span> Color Palette</a></li>
+<li><a href="#typography-scale" id="toc-typography-scale"><span
+class="toc-section-number">1.10.2</span> Typography Scale</a></li>
+<li><a href="#spacing-system" id="toc-spacing-system"><span
+class="toc-section-number">1.10.3</span> Spacing System</a></li>
+<li><a href="#component-design-patterns"
+id="toc-component-design-patterns"><span
+class="toc-section-number">1.10.4</span> Component Design
+Patterns</a></li>
+</ul></li>
+<li><a href="#business-logic-rules" id="toc-business-logic-rules"><span
+class="toc-section-number">1.11</span> Business Logic &amp; Rules</a>
+<ul>
+<li><a href="#shopping-cart-logic" id="toc-shopping-cart-logic"><span
+class="toc-section-number">1.11.1</span> Shopping Cart Logic</a></li>
+<li><a href="#product-catalog-logic"
+id="toc-product-catalog-logic"><span
+class="toc-section-number">1.11.2</span> Product Catalog Logic</a></li>
+<li><a href="#user-account-logic" id="toc-user-account-logic"><span
+class="toc-section-number">1.11.3</span> User Account Logic</a></li>
+<li><a href="#checkout-logic" id="toc-checkout-logic"><span
+class="toc-section-number">1.11.4</span> Checkout Logic</a></li>
+</ul></li>
+<li><a href="#module-specifications"
+id="toc-module-specifications"><span
+class="toc-section-number">1.12</span> Module Specifications</a>
+<ul>
+<li><a href="#homepage-module-moduleshomepage"
+id="toc-homepage-module-moduleshomepage"><span
+class="toc-section-number">1.12.1</span> Homepage Module
+(modules/homepage/)</a></li>
+<li><a href="#category-module-modulescategory"
+id="toc-category-module-modulescategory"><span
+class="toc-section-number">1.12.2</span> Category Module
+(modules/category/)</a></li>
+<li><a href="#product-module-modulesproduct"
+id="toc-product-module-modulesproduct"><span
+class="toc-section-number">1.12.3</span> Product Module
+(modules/product/)</a></li>
+<li><a href="#cart-module-modulescart"
+id="toc-cart-module-modulescart"><span
+class="toc-section-number">1.12.4</span> Cart Module
+(modules/cart/)</a></li>
+<li><a href="#checkout-module-modulescheckout"
+id="toc-checkout-module-modulescheckout"><span
+class="toc-section-number">1.12.5</span> Checkout Module
+(modules/checkout/)</a></li>
+<li><a href="#account-module-modulesaccount"
+id="toc-account-module-modulesaccount"><span
+class="toc-section-number">1.12.6</span> Account Module
+(modules/account/)</a></li>
+<li><a href="#about-module-modulesabout"
+id="toc-about-module-modulesabout"><span
+class="toc-section-number">1.12.7</span> About Module
+(modules/about/)</a></li>
+</ul></li>
+<li><a href="#performance-requirements"
+id="toc-performance-requirements"><span
+class="toc-section-number">1.13</span> Performance Requirements</a>
+<ul>
+<li><a href="#loading-performance" id="toc-loading-performance"><span
+class="toc-section-number">1.13.1</span> Loading Performance</a></li>
+<li><a href="#bundle-size-optimization"
+id="toc-bundle-size-optimization"><span
+class="toc-section-number">1.13.2</span> Bundle Size
+Optimization</a></li>
+<li><a href="#responsive-performance"
+id="toc-responsive-performance"><span
+class="toc-section-number">1.13.3</span> Responsive Performance</a></li>
+</ul></li>
+<li><a href="#security-compliance" id="toc-security-compliance"><span
+class="toc-section-number">1.14</span> Security &amp; Compliance</a>
+<ul>
+<li><a href="#data-security" id="toc-data-security"><span
+class="toc-section-number">1.14.1</span> Data Security</a></li>
+<li><a href="#privacy-compliance" id="toc-privacy-compliance"><span
+class="toc-section-number">1.14.2</span> Privacy Compliance</a></li>
+<li><a href="#accessibility-wcag-2.1"
+id="toc-accessibility-wcag-2.1"><span
+class="toc-section-number">1.14.3</span> Accessibility (WCAG
+2.1)</a></li>
+</ul></li>
+<li><a href="#future-enhancements" id="toc-future-enhancements"><span
+class="toc-section-number">1.15</span> Future Enhancements</a>
+<ul>
+<li><a href="#phase-2-backend-integration"
+id="toc-phase-2-backend-integration"><span
+class="toc-section-number">1.15.1</span> Phase 2: Backend
+Integration</a></li>
+<li><a href="#phase-3-advanced-features"
+id="toc-phase-3-advanced-features"><span
+class="toc-section-number">1.15.2</span> Phase 3: Advanced
+Features</a></li>
+<li><a href="#phase-4-mobile-app" id="toc-phase-4-mobile-app"><span
+class="toc-section-number">1.15.3</span> Phase 4: Mobile App</a></li>
+<li><a href="#phase-5-pwa-features" id="toc-phase-5-pwa-features"><span
+class="toc-section-number">1.15.4</span> Phase 5: PWA Features</a></li>
+</ul></li>
+<li><a href="#appendices" id="toc-appendices"><span
+class="toc-section-number">1.16</span> Appendices</a>
+<ul>
+<li><a href="#appendix-a-technical-dependencies"
+id="toc-appendix-a-technical-dependencies"><span
+class="toc-section-number">1.16.1</span> Appendix A: Technical
+Dependencies</a></li>
+<li><a href="#appendix-b-browser-compatibility"
+id="toc-appendix-b-browser-compatibility"><span
+class="toc-section-number">1.16.2</span> Appendix B: Browser
+Compatibility</a></li>
+<li><a href="#appendix-c-deployment-configuration"
+id="toc-appendix-c-deployment-configuration"><span
+class="toc-section-number">1.16.3</span> Appendix C: Deployment
+Configuration</a></li>
+<li><a href="#appendix-d-git-commit-history"
+id="toc-appendix-d-git-commit-history"><span
+class="toc-section-number">1.16.4</span> Appendix D: Git Commit
+History</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 data-number="1" id="business-requirements-document-brd"><span
+class="header-section-number">1</span> Business Requirements Document
+(BRD)</h1>
+<h2 data-number="1.1" id="buyzy---modern-e-commerce-platform"><span
+class="header-section-number">1.1</span> BuyZy - Modern E-commerce
+Platform</h2>
+<hr />
+<p><strong>Document Version:</strong> 1.0<br />
+<strong>Date:</strong> August 4, 2025<br />
+<strong>Project Name:</strong> BuyZy E-commerce Platform<br />
+<strong>Client:</strong> Portfolio Project<br />
+<strong>Prepared By:</strong> Development Team</p>
+<hr />
+<h2 data-number="1.2" id="table-of-contents"><span
+class="header-section-number">1.2</span> Table of Contents</h2>
+<ol type="1">
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#project-overview">Project Overview</a></li>
+<li><a href="#business-objectives">Business Objectives</a></li>
+<li><a href="#stakeholder-analysis">Stakeholder Analysis</a></li>
+<li><a href="#functional-requirements">Functional Requirements</a></li>
+<li><a href="#user-journey--flow">User Journey &amp; Flow</a></li>
+<li><a href="#technical-architecture">Technical Architecture</a></li>
+<li><a href="#uiux-design-system">UI/UX Design System</a></li>
+<li><a href="#business-logic--rules">Business Logic &amp; Rules</a></li>
+<li><a href="#module-specifications">Module Specifications</a></li>
+<li><a href="#performance-requirements">Performance
+Requirements</a></li>
+<li><a href="#security--compliance">Security &amp; Compliance</a></li>
+<li><a href="#future-enhancements">Future Enhancements</a></li>
+<li><a href="#appendices">Appendices</a></li>
+</ol>
+<hr />
+<h2 data-number="1.3" id="executive-summary"><span
+class="header-section-number">1.3</span> Executive Summary</h2>
+<h3 data-number="1.3.1" id="project-vision"><span
+class="header-section-number">1.3.1</span> Project Vision</h3>
+<p>BuyZy is a modern, responsive e-commerce platform designed to provide
+users with an intuitive online shopping experience. The platform
+showcases contemporary web development practices while delivering a
+comprehensive marketplace solution.</p>
+<h3 data-number="1.3.2" id="key-deliverables"><span
+class="header-section-number">1.3.2</span> Key Deliverables</h3>
+<ul>
+<li><strong>Frontend Application</strong>: React-based responsive web
+application</li>
+<li><strong>Live Deployment</strong>: GitHub Pages hosted solution</li>
+<li><strong>Professional Documentation</strong>: Complete technical
+documentation</li>
+<li><strong>Portfolio Showcase</strong>: Demonstration of modern
+development skills</li>
+</ul>
+<h3 data-number="1.3.3" id="success-metrics"><span
+class="header-section-number">1.3.3</span> Success Metrics</h3>
+<ul>
+<li>✅ <strong>100% Responsive Design</strong> across all device
+types</li>
+<li>✅ <strong>Sub-3 Second Load Times</strong> for optimal user
+experience</li>
+<li>✅ <strong>Complete Shopping Flow</strong> from browsing to
+checkout</li>
+<li>✅ <strong>Professional Code Quality</strong> with modular
+architecture</li>
+</ul>
+<hr />
+<h2 data-number="1.4" id="project-overview"><span
+class="header-section-number">1.4</span> Project Overview</h2>
+<h3 data-number="1.4.1" id="business-context"><span
+class="header-section-number">1.4.1</span> Business Context</h3>
+<p>BuyZy addresses the need for a modern, user-friendly e-commerce
+platform that demonstrates contemporary web development capabilities
+while providing a complete shopping experience.</p>
+<h3 data-number="1.4.2" id="target-audience"><span
+class="header-section-number">1.4.2</span> Target Audience</h3>
+<ul>
+<li><strong>Primary</strong>: Tech recruiters and potential
+employers</li>
+<li><strong>Secondary</strong>: E-commerce business stakeholders</li>
+<li><strong>Tertiary</strong>: Web development community and peers</li>
+</ul>
+<h3 data-number="1.4.3" id="project-scope"><span
+class="header-section-number">1.4.3</span> Project Scope</h3>
+<p><strong>In Scope:</strong> - Complete frontend e-commerce application
+- Responsive design for all devices - Shopping cart and checkout
+functionality - User account management - Product catalog with
+filtering/sorting - Company information and about page</p>
+<p><strong>Out of Scope:</strong> - Backend API development - Payment
+processing integration - User authentication with database - Real
+inventory management - Email notification systems</p>
+<hr />
+<h2 data-number="1.5" id="business-objectives"><span
+class="header-section-number">1.5</span> Business Objectives</h2>
+<h3 data-number="1.5.1" id="primary-objectives"><span
+class="header-section-number">1.5.1</span> Primary Objectives</h3>
+<ol type="1">
+<li><strong>Showcase Technical Skills</strong>
+<ul>
+<li>Demonstrate React development expertise</li>
+<li>Show responsive design capabilities</li>
+<li>Exhibit modern development practices</li>
+</ul></li>
+<li><strong>Create Portfolio Asset</strong>
+<ul>
+<li>Professional-grade code repository</li>
+<li>Live demonstration application</li>
+<li>Comprehensive documentation</li>
+</ul></li>
+<li><strong>Demonstrate E-commerce Understanding</strong>
+<ul>
+<li>Complete shopping user journey</li>
+<li>Business logic implementation</li>
+<li>Industry best practices</li>
+</ul></li>
+</ol>
+<h3 data-number="1.5.2" id="secondary-objectives"><span
+class="header-section-number">1.5.2</span> Secondary Objectives</h3>
+<ol type="1">
+<li><strong>Performance Excellence</strong>
+<ul>
+<li>Fast loading times</li>
+<li>Optimized bundle sizes</li>
+<li>Smooth user interactions</li>
+</ul></li>
+<li><strong>Code Quality</strong>
+<ul>
+<li>Clean, maintainable architecture</li>
+<li>Professional git workflow</li>
+<li>Comprehensive documentation</li>
+</ul></li>
+</ol>
+<hr />
+<h2 data-number="1.6" id="stakeholder-analysis"><span
+class="header-section-number">1.6</span> Stakeholder Analysis</h2>
+<h3 data-number="1.6.1" id="primary-stakeholders"><span
+class="header-section-number">1.6.1</span> Primary Stakeholders</h3>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 15%" />
+<col style="width: 31%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Role</th>
+<th>Interest</th>
+<th>Influence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Portfolio Owner</strong></td>
+<td>Developer</td>
+<td>Career advancement</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Potential Employers</strong></td>
+<td>Evaluators</td>
+<td>Technical assessment</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Development Community</strong></td>
+<td>Peers</td>
+<td>Code quality review</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="1.6.2" id="secondary-stakeholders"><span
+class="header-section-number">1.6.2</span> Secondary Stakeholders</h3>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Role</th>
+<th>Interest</th>
+<th>Influence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>End Users</strong></td>
+<td>Shoppers</td>
+<td>User experience</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Business Analysts</strong></td>
+<td>Reviewers</td>
+<td>Business logic</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 data-number="1.7" id="functional-requirements"><span
+class="header-section-number">1.7</span> Functional Requirements</h2>
+<h3 data-number="1.7.1" id="fr-001-homepage-navigation"><span
+class="header-section-number">1.7.1</span> FR-001: Homepage &amp;
+Navigation</h3>
+<p><strong>Priority:</strong> High<br />
+<strong>Description:</strong> Users must be able to navigate the
+platform intuitively</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ Responsive navigation menu
+with hamburger menu for mobile - ✅ Hero section with clear value
+proposition - ✅ Featured products showcase - ✅ Category highlights for
+easy browsing - ✅ Footer with comprehensive links</p>
+<h3 data-number="1.7.2" id="fr-002-product-catalog"><span
+class="header-section-number">1.7.2</span> FR-002: Product Catalog</h3>
+<p><strong>Priority:</strong> High<br />
+<strong>Description:</strong> Users must be able to browse and search
+products</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ Product grid with
+responsive layout - ✅ Product detail pages with image galleries - ✅
+Advanced filtering (price, category, rating) - ✅ Sorting options
+(price, popularity, rating) - ✅ Pagination for large product sets</p>
+<h3 data-number="1.7.3" id="fr-003-shopping-cart"><span
+class="header-section-number">1.7.3</span> FR-003: Shopping Cart</h3>
+<p><strong>Priority:</strong> High<br />
+<strong>Description:</strong> Users must be able to manage their
+shopping cart</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ Add/remove products from
+cart - ✅ Quantity adjustment functionality - ✅ Cart persistence across
+sessions - ✅ Real-time cart total calculations - ✅ Cart badge in
+navigation</p>
+<h3 data-number="1.7.4" id="fr-004-checkout-process"><span
+class="header-section-number">1.7.4</span> FR-004: Checkout Process</h3>
+<p><strong>Priority:</strong> High<br />
+<strong>Description:</strong> Users must be able to complete
+purchases</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ Shipping address form with
+validation - ✅ Payment method selection - ✅ Order summary with
+itemized costs - ✅ Order confirmation page - ✅ Form validation and
+error handling</p>
+<h3 data-number="1.7.5" id="fr-005-user-account-management"><span
+class="header-section-number">1.7.5</span> FR-005: User Account
+Management</h3>
+<p><strong>Priority:</strong> Medium<br />
+<strong>Description:</strong> Users must be able to manage their
+accounts</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ Account dashboard with
+overview - ✅ Order history display - ✅ Profile management - ✅ Account
+navigation sidebar</p>
+<h3 data-number="1.7.6" id="fr-006-company-information"><span
+class="header-section-number">1.7.6</span> FR-006: Company
+Information</h3>
+<p><strong>Priority:</strong> Medium<br />
+<strong>Description:</strong> Users must be able to learn about the
+company</p>
+<p><strong>Acceptance Criteria:</strong> - ✅ About page with company
+story - ✅ Team member profiles - ✅ Core values presentation - ✅
+Contact information and forms</p>
+<hr />
+<h2 data-number="1.8" id="user-journey-flow"><span
+class="header-section-number">1.8</span> User Journey &amp; Flow</h2>
+<h3 data-number="1.8.1"
+id="primary-user-journey-complete-shopping-experience"><span
+class="header-section-number">1.8.1</span> Primary User Journey:
+Complete Shopping Experience</h3>
+<pre><code>1. Landing → 2. Browse → 3. Product Detail → 4. Add to Cart → 5. Checkout → 6. Confirmation</code></pre>
+<h4 data-number="1.8.1.1" id="detailed-flow-breakdown"><span
+class="header-section-number">1.8.1.1</span> Detailed Flow
+Breakdown:</h4>
+<p><strong>1. Homepage Entry</strong></p>
+<pre><code>User visits homepage
+↓
+Views hero section and value proposition
+↓
+Explores featured products or categories
+↓
+Navigates to product catalog</code></pre>
+<p><strong>2. Product Discovery</strong></p>
+<pre><code>User browses product categories
+↓
+Applies filters (price, brand, rating)
+↓
+Sorts products by preference
+↓
+Views product details</code></pre>
+<p><strong>3. Shopping Cart Management</strong></p>
+<pre><code>User adds products to cart
+↓
+Adjusts quantities as needed
+↓
+Reviews cart contents
+↓
+Proceeds to checkout</code></pre>
+<p><strong>4. Checkout Process</strong></p>
+<pre><code>User enters shipping address
+↓
+Selects payment method
+↓
+Reviews order summary
+↓
+Completes purchase
+↓
+Views confirmation page</code></pre>
+<p><strong>5. Account Management</strong></p>
+<pre><code>User accesses account dashboard
+↓
+Reviews order history
+↓
+Updates profile information
+↓
+Manages account settings</code></pre>
+<h3 data-number="1.8.2" id="alternative-user-journeys"><span
+class="header-section-number">1.8.2</span> Alternative User
+Journeys</h3>
+<p><strong>Quick Browse Journey:</strong></p>
+<pre><code>Homepage → Categories → Products → Exit</code></pre>
+<p><strong>Information Seeking Journey:</strong></p>
+<pre><code>Homepage → About Page → Team → Contact → Exit</code></pre>
+<p><strong>Cart Abandonment Recovery:</strong></p>
+<pre><code>Add to Cart → Browse More → Return to Cart → Complete Purchase</code></pre>
+<hr />
+<h2 data-number="1.9" id="technical-architecture"><span
+class="header-section-number">1.9</span> Technical Architecture</h2>
+<h3 data-number="1.9.1" id="frontend-architecture"><span
+class="header-section-number">1.9.1</span> Frontend Architecture</h3>
+<pre><code>┌─────────────────────────────────────┐
+│             React Application       │
+├─────────────────────────────────────┤
+│  App.jsx (Router Configuration)     │
+├─────────────────────────────────────┤
+│           Feature Modules           │
+│  ┌─────────┬─────────┬─────────┐    │
+│  │Homepage │Category │Product  │    │
+│  ├─────────┼─────────┼─────────┤    │
+│  │Cart     │Checkout │Account  │    │
+│  ├─────────┼─────────┼─────────┤    │
+│  │About    │Orders   │Profile  │    │
+│  └─────────┴─────────┴─────────┘    │
+├─────────────────────────────────────┤
+│        Shared Components            │
+│  Navbar, Footer, Cards, Forms      │
+├─────────────────────────────────────┤
+│          Context API                │
+│    CartContext, UserContext        │
+└─────────────────────────────────────┘</code></pre>
+<h3 data-number="1.9.2" id="technology-stack"><span
+class="header-section-number">1.9.2</span> Technology Stack</h3>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 22%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frontend Framework</strong></td>
+<td>React 18</td>
+<td>Component-based UI development</td>
+</tr>
+<tr>
+<td><strong>Styling</strong></td>
+<td>TailwindCSS</td>
+<td>Utility-first styling system</td>
+</tr>
+<tr>
+<td><strong>Routing</strong></td>
+<td>React Router v6</td>
+<td>Client-side navigation</td>
+</tr>
+<tr>
+<td><strong>State Management</strong></td>
+<td>Context API</td>
+<td>Global state management</td>
+</tr>
+<tr>
+<td><strong>Build Tool</strong></td>
+<td>Vite</td>
+<td>Fast development and build</td>
+</tr>
+<tr>
+<td><strong>Icons</strong></td>
+<td>React Icons</td>
+<td>Consistent iconography</td>
+</tr>
+<tr>
+<td><strong>Deployment</strong></td>
+<td>GitHub Pages</td>
+<td>Static site hosting</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="1.9.3" id="component-architecture-pattern"><span
+class="header-section-number">1.9.3</span> Component Architecture
+Pattern</h3>
+<pre><code>Feature Module Structure:
+├── components/           # Feature-specific components
+├── hooks/               # Custom hooks for business logic
+├── data/                # Mock data and constants
+├── utils/               # Utility functions
+├── [Feature]Page.jsx    # Main page component
+└── index.js            # Module exports</code></pre>
+<hr />
+<h2 data-number="1.10" id="uiux-design-system"><span
+class="header-section-number">1.10</span> UI/UX Design System</h2>
+<h3 data-number="1.10.1" id="color-palette"><span
+class="header-section-number">1.10.1</span> Color Palette</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Primary Colors<span class="in">:</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>- Primary Blue<span class="in">:</span> <span class="pp">#3b82f6</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>- Primary Blue Dark<span class="in">:</span> <span class="pp">#2563eb</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>- Primary Blue Darker<span class="in">:</span> <span class="pp">#1d4ed8</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Secondary Colors<span class="in">:</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>- Gray 50<span class="in">:</span> <span class="pp">#f9fafb</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>- Gray 100<span class="in">:</span> <span class="pp">#f3f4f6</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>- Gray 600<span class="in">:</span> <span class="pp">#4b5563</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>- Gray 900<span class="in">:</span> <span class="pp">#111827</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Accent Colors<span class="in">:</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>- Success Green<span class="in">:</span> <span class="pp">#10b981</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>- Warning Yellow<span class="in">:</span> <span class="pp">#f59e0b</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>- Error Red<span class="in">:</span> <span class="pp">#ef4444</span></span></code></pre></div>
+<h3 data-number="1.10.2" id="typography-scale"><span
+class="header-section-number">1.10.2</span> Typography Scale</h3>
+<pre><code>Headings:
+- H1: text-4xl (36px) - Page titles
+- H2: text-3xl (30px) - Section headers
+- H3: text-2xl (24px) - Subsection headers
+- H4: text-xl (20px) - Component titles
+
+Body Text:
+- Large: text-lg (18px) - Important content
+- Base: text-base (16px) - Standard content
+- Small: text-sm (14px) - Supporting content
+- Extra Small: text-xs (12px) - Labels, captions</code></pre>
+<h3 data-number="1.10.3" id="spacing-system"><span
+class="header-section-number">1.10.3</span> Spacing System</h3>
+<pre><code>Margin/Padding Scale:
+- xs: 0.25rem (4px)
+- sm: 0.5rem (8px)
+- md: 1rem (16px)
+- lg: 1.5rem (24px)
+- xl: 2rem (32px)
+- 2xl: 3rem (48px)</code></pre>
+<h3 data-number="1.10.4" id="component-design-patterns"><span
+class="header-section-number">1.10.4</span> Component Design
+Patterns</h3>
+<p><strong>Button Variants:</strong></p>
+<pre><code>Primary: Blue background, white text, rounded
+Secondary: White background, blue border, blue text
+Ghost: Transparent background, blue text, hover background</code></pre>
+<p><strong>Card Components:</strong></p>
+<pre><code>Product Card: Image, title, price, rating, hover effects
+Category Card: Icon, title, description, navigation
+Info Card: Content with subtle border and shadow</code></pre>
+<p><strong>Form Elements:</strong></p>
+<pre><code>Input Fields: Clean borders, focus states, validation
+Dropdowns: Consistent styling with arrow indicators
+Checkboxes: Custom styled with brand colors</code></pre>
+<hr />
+<h2 data-number="1.11" id="business-logic-rules"><span
+class="header-section-number">1.11</span> Business Logic &amp;
+Rules</h2>
+<h3 data-number="1.11.1" id="shopping-cart-logic"><span
+class="header-section-number">1.11.1</span> Shopping Cart Logic</h3>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Business Rules<span class="op">:</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Maximum quantity per item<span class="op">:</span> <span class="dv">10</span> units</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Cart persistence<span class="op">:</span> localStorage <span class="cf">for</span> session continuity</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Price calculations<span class="op">:</span> Subtotal <span class="op">+</span> shipping <span class="op">+</span> tax</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Inventory validation<span class="op">:</span> Check availability before checkout</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> Cart expiration<span class="op">:</span> <span class="dv">24</span> hours <span class="cf">for</span> held items</span></code></pre></div>
+<h3 data-number="1.11.2" id="product-catalog-logic"><span
+class="header-section-number">1.11.2</span> Product Catalog Logic</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>Filtering Rules<span class="op">:</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Price range<span class="op">:</span> Min $0 <span class="op">-</span> Max $10<span class="op">,</span><span class="dv">000</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Category hierarchy<span class="op">:</span> Main category → Subcategory</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Rating filter<span class="op">:</span> <span class="dv">1</span><span class="op">-</span><span class="dv">5</span> stars <span class="cf">with</span> half<span class="op">-</span>star precision</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Availability<span class="op">:</span> In stock<span class="op">,</span> out <span class="kw">of</span> stock<span class="op">,</span> pre<span class="op">-</span>order</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Sorting Options<span class="op">:</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Price<span class="op">:</span> Low to high<span class="op">,</span> high to low</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Popularity<span class="op">:</span> Based on view count and ratings</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Rating<span class="op">:</span> Highest rated first</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Newest<span class="op">:</span> Recently added products first</span></code></pre></div>
+<h3 data-number="1.11.3" id="user-account-logic"><span
+class="header-section-number">1.11.3</span> User Account Logic</h3>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Account Rules<span class="op">:</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Order history<span class="op">:</span> Chronological display<span class="op">,</span> newest first</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Profile updates<span class="op">:</span> Real<span class="op">-</span>time validation</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Address management<span class="op">:</span> Multiple shipping addresses</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Order status<span class="op">:</span> Processing<span class="op">,</span> shipped<span class="op">,</span> delivered<span class="op">,</span> cancelled</span></code></pre></div>
+<h3 data-number="1.11.4" id="checkout-logic"><span
+class="header-section-number">1.11.4</span> Checkout Logic</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>Validation Rules<span class="op">:</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fl">1.</span> Required fields<span class="op">:</span> Name<span class="op">,</span> address<span class="op">,</span> payment method</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fl">2.</span> Address validation<span class="op">:</span> Format and completeness</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fl">3.</span> Payment validation<span class="op">:</span> Card number<span class="op">,</span> expiry<span class="op">,</span> CVV format</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fl">4.</span> Order minimum<span class="op">:</span> $10 minimum order value</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fl">5.</span> Shipping calculation<span class="op">:</span> Based on location and weight</span></code></pre></div>
+<hr />
+<h2 data-number="1.12" id="module-specifications"><span
+class="header-section-number">1.12</span> Module Specifications</h2>
+<h3 data-number="1.12.1" id="homepage-module-moduleshomepage"><span
+class="header-section-number">1.12.1</span> Homepage Module
+(modules/homepage/)</h3>
+<p><strong>Purpose:</strong> Landing page and initial user
+engagement</p>
+<p><strong>Components:</strong> - <code>HeroBanner.jsx</code> - Main
+promotional section - <code>FeaturedProducts.jsx</code> - Product
+showcase grid - <code>CategoryHighlights.jsx</code> - Category
+navigation cards - <code>ValueProposition.jsx</code> - Service benefits
+display - <code>NewsletterSignup.jsx</code> - Email subscription
+form</p>
+<p><strong>Business Logic:</strong> - Featured products rotation -
+Category prioritization - Newsletter validation - Responsive
+breakpoints</p>
+<hr />
+<h3 data-number="1.12.2" id="category-module-modulescategory"><span
+class="header-section-number">1.12.2</span> Category Module
+(modules/category/)</h3>
+<p><strong>Purpose:</strong> Product browsing and discovery</p>
+<p><strong>Components:</strong> - <code>CategoryPage.jsx</code> - Main
+category display - <code>CategoryHeader.jsx</code> - Breadcrumbs and
+title - <code>FilterSidebar.jsx</code> - Product filtering options -
+<code>ProductGrid.jsx</code> - Responsive product layout -
+<code>SortControl.jsx</code> - Sorting functionality -
+<code>PaginationControls.jsx</code> - Page navigation</p>
+<p><strong>Business Logic:</strong> - Filter combinations - Sort
+algorithms - Pagination calculations - URL parameter management</p>
+<hr />
+<h3 data-number="1.12.3" id="product-module-modulesproduct"><span
+class="header-section-number">1.12.3</span> Product Module
+(modules/product/)</h3>
+<p><strong>Purpose:</strong> Individual product details and
+management</p>
+<p><strong>Components:</strong> - <code>ProductDetailPage.jsx</code> -
+Complete product view - <code>ProductImages.jsx</code> - Image gallery
+with zoom - <code>ProductInfo.jsx</code> - Description, specs, pricing -
+<code>ProductActions.jsx</code> - Add to cart, wishlist -
+<code>ProductReviews.jsx</code> - Customer reviews display -
+<code>ProductSpecifications.jsx</code> - Technical details</p>
+<p><strong>Business Logic:</strong> - Image gallery navigation - Variant
+selection - Review aggregation - Stock availability</p>
+<hr />
+<h3 data-number="1.12.4" id="cart-module-modulescart"><span
+class="header-section-number">1.12.4</span> Cart Module
+(modules/cart/)</h3>
+<p><strong>Purpose:</strong> Shopping cart management</p>
+<p><strong>Components:</strong> - <code>CartPage.jsx</code> - Full cart
+view - <code>CartItem.jsx</code> - Individual item display -
+<code>CartSummary.jsx</code> - Totals calculation</p>
+<p><strong>Business Logic:</strong> - Quantity adjustments - Price
+calculations - Item removal - Persistence management</p>
+<hr />
+<h3 data-number="1.12.5" id="checkout-module-modulescheckout"><span
+class="header-section-number">1.12.5</span> Checkout Module
+(modules/checkout/)</h3>
+<p><strong>Purpose:</strong> Purchase completion process</p>
+<p><strong>Components:</strong> - <code>CheckoutPage.jsx</code> -
+Multi-step checkout - <code>ShippingAddressForm.jsx</code> - Address
+collection - <code>PaymentMethodForm.jsx</code> - Payment details -
+<code>OrderSummary.jsx</code> - Final review</p>
+<p><strong>Business Logic:</strong> - Form validation - Step progression
+- Data persistence - Order creation</p>
+<hr />
+<h3 data-number="1.12.6" id="account-module-modulesaccount"><span
+class="header-section-number">1.12.6</span> Account Module
+(modules/account/)</h3>
+<p><strong>Purpose:</strong> User account management</p>
+<p><strong>Components:</strong> - <code>AccountDashboard.jsx</code> -
+Overview page - <code>OrdersPage.jsx</code> - Order history -
+<code>ProfilePage.jsx</code> - Personal information -
+<code>AccountSidebar.jsx</code> - Navigation menu</p>
+<p><strong>Business Logic:</strong> - Account data management - Order
+status tracking - Profile updates - Security validation</p>
+<hr />
+<h3 data-number="1.12.7" id="about-module-modulesabout"><span
+class="header-section-number">1.12.7</span> About Module
+(modules/about/)</h3>
+<p><strong>Purpose:</strong> Company information and brand building</p>
+<p><strong>Components:</strong> - <code>AboutHero.jsx</code> - Company
+introduction - <code>CompanyStory.jsx</code> - Mission and vision -
+<code>CoreValues.jsx</code> - Value proposition -
+<code>TeamSection.jsx</code> - Team member profiles -
+<code>ContactCta.jsx</code> - Contact information</p>
+<p><strong>Business Logic:</strong> - Content management - Team data
+display - Contact form validation - Newsletter integration</p>
+<hr />
+<h2 data-number="1.13" id="performance-requirements"><span
+class="header-section-number">1.13</span> Performance Requirements</h2>
+<h3 data-number="1.13.1" id="loading-performance"><span
+class="header-section-number">1.13.1</span> Loading Performance</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>Current</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First Contentful Paint</strong></td>
+<td>&lt; 1.5s</td>
+<td>✅ 1.2s</td>
+</tr>
+<tr>
+<td><strong>Largest Contentful Paint</strong></td>
+<td>&lt; 2.5s</td>
+<td>✅ 2.1s</td>
+</tr>
+<tr>
+<td><strong>Time to Interactive</strong></td>
+<td>&lt; 3.0s</td>
+<td>✅ 2.8s</td>
+</tr>
+<tr>
+<td><strong>Cumulative Layout Shift</strong></td>
+<td>&lt; 0.1</td>
+<td>✅ 0.05</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="1.13.2" id="bundle-size-optimization"><span
+class="header-section-number">1.13.2</span> Bundle Size
+Optimization</h3>
+<pre><code>Main Bundle: ~498KB (gzipped: ~127KB)
+About Page Chunk: ~27KB (lazy loaded)
+CSS Bundle: ~44KB (gzipped: ~7KB)
+
+Optimization Techniques:
+- Code splitting by route
+- Lazy loading for About page
+- Tree shaking for unused code
+- Image optimization and lazy loading</code></pre>
+<h3 data-number="1.13.3" id="responsive-performance"><span
+class="header-section-number">1.13.3</span> Responsive Performance</h3>
+<pre><code>Mobile (&lt; 640px):
+- Touch-friendly interfaces
+- Optimized image sizes
+- Simplified navigation
+
+Tablet (640px - 1024px):
+- Grid layout adjustments
+- Optimized touch targets
+- Balanced content density
+
+Desktop (&gt; 1024px):
+- Full feature set
+- Multi-column layouts
+- Enhanced interactions</code></pre>
+<hr />
+<h2 data-number="1.14" id="security-compliance"><span
+class="header-section-number">1.14</span> Security &amp; Compliance</h2>
+<h3 data-number="1.14.1" id="data-security"><span
+class="header-section-number">1.14.1</span> Data Security</h3>
+<pre><code>Client-Side Security:
+1. Input validation on all forms
+2. XSS prevention through React&#39;s built-in protection
+3. No sensitive data storage in localStorage
+4. Secure external links (rel=&quot;noopener noreferrer&quot;)</code></pre>
+<h3 data-number="1.14.2" id="privacy-compliance"><span
+class="header-section-number">1.14.2</span> Privacy Compliance</h3>
+<pre><code>Data Handling:
+1. No personal data collection without consent
+2. Clear privacy policy (placeholder)
+3. Cookie usage notification
+4. User data control options</code></pre>
+<h3 data-number="1.14.3" id="accessibility-wcag-2.1"><span
+class="header-section-number">1.14.3</span> Accessibility (WCAG
+2.1)</h3>
+<pre><code>Level AA Compliance:
+1. Semantic HTML structure
+2. ARIA labels for interactive elements
+3. Keyboard navigation support
+4. Color contrast ratio &gt; 4.5:1
+5. Screen reader compatibility</code></pre>
+<hr />
+<h2 data-number="1.15" id="future-enhancements"><span
+class="header-section-number">1.15</span> Future Enhancements</h2>
+<h3 data-number="1.15.1" id="phase-2-backend-integration"><span
+class="header-section-number">1.15.1</span> Phase 2: Backend
+Integration</h3>
+<pre><code>Planned Features:
+- REST API integration
+- Real user authentication
+- Database-driven product catalog
+- Order management system
+- Admin dashboard</code></pre>
+<h3 data-number="1.15.2" id="phase-3-advanced-features"><span
+class="header-section-number">1.15.2</span> Phase 3: Advanced
+Features</h3>
+<pre><code>Advanced Functionality:
+- Search functionality with filters
+- Product recommendations
+- Wishlist and favorites
+- Customer reviews and ratings
+- Social media integration</code></pre>
+<h3 data-number="1.15.3" id="phase-4-mobile-app"><span
+class="header-section-number">1.15.3</span> Phase 4: Mobile App</h3>
+<pre><code>Mobile Development:
+- React Native mobile app
+- Push notifications
+- Mobile-specific features
+- App store deployment</code></pre>
+<h3 data-number="1.15.4" id="phase-5-pwa-features"><span
+class="header-section-number">1.15.4</span> Phase 5: PWA Features</h3>
+<pre><code>Progressive Web App:
+- Offline functionality
+- Service worker implementation
+- App-like experience
+- Push notification support</code></pre>
+<hr />
+<h2 data-number="1.16" id="appendices"><span
+class="header-section-number">1.16</span> Appendices</h2>
+<h3 data-number="1.16.1" id="appendix-a-technical-dependencies"><span
+class="header-section-number">1.16.1</span> Appendix A: Technical
+Dependencies</h3>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;dependencies&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;react&quot;</span><span class="fu">:</span> <span class="st">&quot;^19.1.0&quot;</span><span class="fu">,</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;react-dom&quot;</span><span class="fu">:</span> <span class="st">&quot;^19.1.0&quot;</span><span class="fu">,</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;react-icons&quot;</span><span class="fu">:</span> <span class="st">&quot;^5.5.0&quot;</span><span class="fu">,</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;react-router-dom&quot;</span><span class="fu">:</span> <span class="st">&quot;^7.7.1&quot;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;devDependencies&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;@vitejs/plugin-react&quot;</span><span class="fu">:</span> <span class="st">&quot;^4.3.4&quot;</span><span class="fu">,</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;tailwindcss&quot;</span><span class="fu">:</span> <span class="st">&quot;^3.4.15&quot;</span><span class="fu">,</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;vite&quot;</span><span class="fu">:</span> <span class="st">&quot;^7.0.6&quot;</span><span class="fu">,</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;gh-pages&quot;</span><span class="fu">:</span> <span class="st">&quot;^6.2.0&quot;</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 data-number="1.16.2" id="appendix-b-browser-compatibility"><span
+class="header-section-number">1.16.2</span> Appendix B: Browser
+Compatibility</h3>
+<pre><code>Supported Browsers:
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Mobile Safari 14+
+- Chrome Mobile 90+</code></pre>
+<h3 data-number="1.16.3" id="appendix-c-deployment-configuration"><span
+class="header-section-number">1.16.3</span> Appendix C: Deployment
+Configuration</h3>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">// vite.config.js</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="fu">defineConfig</span>({</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">plugins</span><span class="op">:</span> [<span class="fu">react</span>()]<span class="op">,</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">base</span><span class="op">:</span> <span class="st">&#39;/BuyZy/&#39;</span><span class="op">,</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">build</span><span class="op">:</span> {</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">outDir</span><span class="op">:</span> <span class="st">&#39;dist&#39;</span><span class="op">,</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="co">// package.json deployment scripts</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;homepage&quot;</span><span class="op">:</span> <span class="st">&quot;https://Almuhajiri.github.io/BuyZy&quot;</span><span class="op">,</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;scripts&quot;</span><span class="op">:</span> {</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;predeploy&quot;</span><span class="op">:</span> <span class="st">&quot;npm run build&quot;</span><span class="op">,</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;deploy&quot;</span><span class="op">:</span> <span class="st">&quot;gh-pages -d dist&quot;</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 data-number="1.16.4" id="appendix-d-git-commit-history"><span
+class="header-section-number">1.16.4</span> Appendix D: Git Commit
+History</h3>
+<pre><code>Recent Commits:
+- feat: initialize React + Vite project with TailwindCSS
+- feat: implement core application architecture
+- feat: implement comprehensive homepage module
+- feat: create advanced category browsing system
+- feat: implement complete e-commerce functionality
+- feat: create comprehensive About page module
+- docs: add comprehensive project documentation
+- feat: add React application entry point and base styling
+- feat: configure GitHub Pages deployment
+- fix: configure React Router basename for GitHub Pages
+- docs: update comprehensive README
+- cleanup: remove unnecessary development documentation files</code></pre>
+<hr />
+<p><strong>Document Status:</strong> ✅ Complete<br />
+<strong>Last Updated:</strong> August 4, 2025<br />
+<strong>Next Review:</strong> Upon feature updates</p>
+<hr />
+<p><em>This Business Requirements Document serves as the comprehensive
+specification for the BuyZy e-commerce platform, detailing all
+functional requirements, technical architecture, and business logic for
+successful project delivery.</em></p>
+</body>
+</html>
